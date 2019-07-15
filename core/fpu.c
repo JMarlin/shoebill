@@ -814,7 +814,7 @@ float128 _from_native(double n)
 #define _native_log2(a) (log(a) / log(2.0)) /* or log2() */
 #define _native_log(a) log(a)
 #define _native_log1p(a) log((a) + 1.0) /* or log1p() */
-double  _native_tentox(a) {
+double  _native_tentox(float a) {
     /*
      * This is a dumb workaround for a clang bug on OS X 10.10
      * Clang wants to optimize pow(10.0, a) to __exp(a), but
@@ -3289,7 +3289,7 @@ void inst_fpu_other () {
 void fpu_initialize()
 {
     fpu_state_t *fpu = (fpu_state_t*)p_alloc(shoe.pool, sizeof(fpu_state_t));
-    memset(fpu, sizeof(fpu_state_t), 0);
+    memset(fpu, 0, sizeof(fpu_state_t));
     shoe.fpu_state = fpu;
 }
 
