@@ -1,12 +1,19 @@
-<h1><img align=right src="../../../pruten.github.io/raw/master/web/stork_tiny_head3.jpg"/>Shoebill</h1>
+<h1>Shoebill <img align="right" src="stork_tiny_head3.jpg" /></h1>
 
-A Macintosh II emulator that runs A/UX (and A/UX only). 
+A Macintosh II emulator that runs A/UX (and A/UX only).
 
-Shoebill is an all-new, BSD-licensed Macintosh II emulator designed from the ground up with the singular goal of running A/UX. 
+Platform | CI Status
+---------|:----------------
+Linux    | [![Linux Build Status](http://badges.herokuapp.com/travis/emaculation/shoebill?env=BADGE=linux&label=build&branch=master)](https://travis-ci.org/emaculation/shoebill)
+OSX      | [![OSX Build Status](http://badges.herokuapp.com/travis/emaculation/shoebill?env=BADGE=osx&label=build&branch=master)](https://travis-ci.org/emaculation/shoebill)
+Windows  | [![Windows Build status](https://img.shields.io/appveyor/ci/ianfixes/shoebill.svg)](https://ci.appveyor.com/project/ianfixes/shoebill)
+
+
+Shoebill is an all-new, BSD-licensed Macintosh II emulator designed from the ground up with the singular goal of running A/UX.
 
 Shoebill requires a Macintosh II, IIx or IIcx ROM, and a disk image with A/UX installed.
 
-[Download the latest release], and then see the [getting started] wiki.  
+[Download the latest release], and then see the [getting started] wiki.
 Also check out [screenshots].
 
 __Update (Sept 13, 2015): [Shoebill 0.0.5 is available]__
@@ -24,17 +31,16 @@ __This will probably be the last release. I won't be able to work on Shoebill go
 * ADB
 * PRAM
 * Ethernet (via emulated Apple EtherTalk/DP8390 card)
-* A NuBus video card with 24-bit depth. 
+* A NuBus video card with 24-bit depth.
 
 #### Does not implement (yet)
 * Sound
 * Floppy
 * Serial ports
 
-    
+
 [Download the latest release]:https://github.com/pruten/Shoebill/releases
 [getting started]:https://github.com/pruten/Shoebill/wiki/Getting-Started
 [screenshots]:https://github.com/pruten/Shoebill/wiki/Screenshots
 [Shoebill 0.0.5 is available]:https://github.com/pruten/Shoebill/releases
 [The thread on emaculation.com]:http://www.emaculation.com/forum/viewtopic.php?f=7&t=8288
-
