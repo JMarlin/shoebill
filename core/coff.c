@@ -63,7 +63,7 @@ void coff_free(coff_file *coff)
     p_free_pool(coff->pool);
 }
 
-// Given a path to a COFF binary, create a coff_file structure and return a pointer.
+// Given a buffer containing a COFF binary, create a coff_file structure and return a pointer.
 coff_file* coff_parse(uint8_t *buf, uint32_t buflen, alloc_pool_t *parent_pool)
 {
     uint8_t rawhead[20], *ptr;
