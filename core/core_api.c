@@ -34,6 +34,8 @@
 #include <stdarg.h>
 #include <time.h>
 #include "../core/shoebill.h"
+#include "../core/coff.h"
+#include "../core/elf.h"
 
 
 void shoebill_start()

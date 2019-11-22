@@ -30,6 +30,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include "shoebill.h"
+#include "elf.h"
 
 //TODO
 void symb_inorder(rb_node *cur) {
@@ -67,7 +68,8 @@ void coff_free(coff_file *coff)
     p_free_pool(coff->pool);
 }
 
-// Given a path to a COFF binary, create a coff_file structure and return a pointer.
+//TODO
+// Given a buffer containing a COFF binary, create a coff_file structure and return a pointer.
 coff_file* coff_parse(uint8_t *buf, uint32_t buflen, alloc_pool_t *parent_pool)
 {
     uint8_t rawhead[20], *ptr;
@@ -277,6 +279,7 @@ fail:
     return NULL;
 }
 
+//TODO
 coff_file* coff_parse_from_path(const char *path, alloc_pool_t *parent_pool)
 {
     FILE *f = fopen(path, "rb");
@@ -299,6 +302,7 @@ coff_file* coff_parse_from_path(const char *path, alloc_pool_t *parent_pool)
     return coff;
 }
 
+//TODO
 // dump some data about a coff_file structure
 void print_coff_info(coff_file *coff)
 {
@@ -322,6 +326,7 @@ void print_coff_info(coff_file *coff)
     }
 }
 
+//TODO
 coff_symbol* coff_find_symbol(coff_file *coff, const char *name)
 {
     uint32_t i;
@@ -333,6 +338,7 @@ coff_symbol* coff_find_symbol(coff_file *coff, const char *name)
     return NULL;
 }
 
+//TODO
 coff_symbol* coff_find_func(coff_file *coff, uint32_t addr)
 {
     rb_node *cur;
@@ -358,7 +364,7 @@ coff_symbol* coff_find_func(coff_file *coff, uint32_t addr)
     return last;
 }
       
-
+//TODO
 // big endian -> native int
 uint32_t be2native (uint8_t **dat, uint32_t bytes)
 {

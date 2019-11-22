@@ -30,6 +30,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include "shoebill.h"
+#include "coff.h"
 
 void symb_inorder(rb_node *cur) {
     const coff_symbol *sym = *(coff_symbol**)&cur[1];
